@@ -1,0 +1,23 @@
+<md-card>
+    <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value, myForm.valid)">
+        <!--<div>
+            <label>Name</label>
+            <input type="text" formControlName="Title">
+            <small [hidden]="myForm.controls.Title.valid || (myForm.controls.Title.pristine && !submitted)">
+                Title is required.
+            </small>
+        </div>-->
+        <md-input-container>
+            <input mdInput placeholder="Title" formControlName="Title">
+            <md-error *ngIf="myForm.controls.Title.hasError('required')">
+                Title is required
+            </md-error>
+        </md-input-container>
+        <button md-button type="submit" color="primary">
+            Save
+        </button>
+        <button md-button [routerLink]="['/categories']" color="primary">
+            Cancel
+        </button>
+    </form>
+</md-card>
