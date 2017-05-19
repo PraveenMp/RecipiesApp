@@ -3,12 +3,12 @@ import { Category } from './category.model';
 import { CategoryService } from './categories.service'
 
 @Component({
-  templateUrl: './categories.component.html',
+  templateUrl: './categories-list.component.html',
   styleUrls : ['./categories.component.css']
 })
 
-export class CategoriesComponent {
-  /*categories : Array<Category>;
+export class CategoriesListComponent {
+  categories : Array<Category>;
   constructor(private categoryService:CategoryService) {
     this.getAllCategories();    
   }
@@ -23,5 +23,5 @@ export class CategoriesComponent {
             this.getAllCategories();  
         }
     });
-  }*/
+  }
 }

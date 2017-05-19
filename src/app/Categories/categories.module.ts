@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CategoriesComponent }       from './categories.component';
+import { CategoriesListComponent }       from './categories-list.component';
 import { AddCategoriesComponent } from './addcategories.component';
 import { CategoryService } from './categories.service'
 import { CategoryRoutingModule } from './categories.routing'; 
@@ -13,7 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         CategoryRoutingModule,
         ReactiveFormsModule 
     ],
-    declarations: [CategoriesComponent,AddCategoriesComponent],
+    declarations: [CategoriesComponent,CategoriesListComponent,AddCategoriesComponent],
     providers:[CategoryService]
 })
 export class CategoryModule { }

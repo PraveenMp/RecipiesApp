@@ -7,7 +7,7 @@ import { MaterialModule, MdButtonModule, MdCardModule, MdMenuModule, MdToolbarMo
     imports: [
         CommonModule,
         MaterialModule,
-        BrowserAnimationsModule,
+        //BrowserAnimationsModule,
         MdButtonModule,
         MdMenuModule,
         MdCardModule,
@@ -17,7 +17,7 @@ import { MaterialModule, MdButtonModule, MdCardModule, MdMenuModule, MdToolbarMo
     exports: [
         CommonModule,
         MaterialModule,
-        BrowserAnimationsModule,
+        //BrowserAnimationsModule,
         MdButtonModule,
         MdMenuModule,
         MdCardModule,

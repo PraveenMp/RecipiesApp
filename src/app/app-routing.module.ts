@@ -2,6 +2,11 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const appRoutes: Routes = [
+  /*Lazy loading implemented for ctaegories module*/
+  {
+    path: 'categories',
+    loadChildren: 'app/Categories/categories.module#CategoryModule',
+  },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },
 ];
 
