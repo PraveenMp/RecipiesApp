@@ -25,6 +25,12 @@ export class CategoryService {
     return this.http.post('https://recipiesservicesapp.azurewebsites.net/api/Categories',JSON.stringify(category),options).map(res=>res.json());
   }
 
+  editCategory(category:Category):Observable<Category>{
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.put('https://recipiesservicesapp.azurewebsites.net/api/Categories/'+category.Id,JSON.stringify(category),options).map(res=>res.json());
+  }
+
   deleteCategory(category:Category):Observable<Category>{
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
