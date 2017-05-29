@@ -72,7 +72,7 @@ export class SimpleTinyComponent implements AfterViewInit, ControlValueAccessor 
           setTimeout(function() {
             //console.log(that.editorContent);
             editor.setContent(that.editorContent);
-          }, 400);
+          }, 1000);
         });
         editor.on('keyup change', () => {
           const tinyContent = editor.getContent();
