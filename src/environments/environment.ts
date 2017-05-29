@@ -4,5 +4,7 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  CategoriesServiceUrl : 'https://recipiesservicesapp.azurewebsites.net/api/Categories/',
+  RecipesServiceUrl : 'https://recipiesservicesapp.azurewebsites.net/api/Recipes/'
 };

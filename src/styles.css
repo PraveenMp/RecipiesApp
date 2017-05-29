@@ -5,5 +5,8 @@
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
 }
+.mce-tinymce{
+    margin-top: 5px!important;
+}
 
 

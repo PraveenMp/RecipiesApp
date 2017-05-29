@@ -1,0 +1,13 @@
+.mat-input-container,.mat-select,.mat-slider{
+    width: 100%;
+}
+
+.formrow{
+    margin-top: 20px;
+}
+
+#btnAddRecipe{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}

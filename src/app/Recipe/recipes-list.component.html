@@ -1,0 +1,17 @@
+<md-list>
+  <h3 md-subheader>Recipes</h3>
+  <md-list-item *ngFor="let recipe of recipes">
+    {{recipe.Title}}
+    <span class="spacer"></span>
+    <button md-icon-button (click)=editRecipe(recipe)>
+      <md-icon>edit</md-icon>
+    </button>
+    <button md-icon-button (click)=deleteRecipe(recipe)>
+      <md-icon>delete</md-icon>
+    </button>
+  </md-list-item>
+</md-list>
+
+<span class="app-action">
+  <button id="btnAddRecipe" [routerLink]="['/recipes/add']" md-fab><md-icon>add circle</md-icon></button>
+</span>

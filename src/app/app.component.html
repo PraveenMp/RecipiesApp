@@ -5,9 +5,9 @@
       <md-icon>more_vert</md-icon>
     </button>
     <md-menu #appMenu="mdMenu">
-      <button md-menu-item [routerLink]="['/home']">
+      <button md-menu-item [routerLink]="['/recipes']">
         <md-icon>announcement</md-icon>
-        <span>Home</span>
+        <span>Recipes</span>
       </button>
       <button md-menu-item [routerLink]="['/categories']">
         <md-icon>fingerprint</md-icon>
@@ -15,7 +15,4 @@
       </button>
     </md-menu>
 </md-toolbar>
-
-
-
 <router-outlet></router-outlet>

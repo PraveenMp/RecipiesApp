@@ -1,0 +1,77 @@
+<md-card>
+    <form [formGroup]="myForm" novalidate (ngSubmit)="save(myForm.value, myForm.valid)">
+        <md-input-container>
+            <input mdInput placeholder="Title" formControlName="Title">
+            <md-error *ngIf="submitted && myForm.controls.Title.hasError('required')">
+                Title is required
+            </md-error>
+        </md-input-container>
+
+        <div class="formrow">
+            <md-select placeholder="Category" formControlName="CategoryID">
+                <md-option *ngFor="let category of categories" [value]="category.Id">
+                    {{category.Title}}
+                </md-option>
+            </md-select>
+            <md-error *ngIf="submitted && myForm.controls.CategoryID.hasError('validateCategory')">
+                Category is required
+            </md-error>
+        </div>
+
+
+        <div class="formrow">
+            <label>Ingredients</label>
+            <simple-tiny [elementId]="'txtIngerdients'" formControlName="Ingredients">
+            </simple-tiny>
+            <md-error *ngIf="submitted && myForm.controls.Ingredients.hasError('required')">
+                Ingredients is required
+            </md-error>
+        </div>
+
+        <div class="formrow">
+            <label>Steps</label>            
+            <simple-tiny [elementId]="'txtSteps'" formControlName="Steps">
+            </simple-tiny>
+            <md-error *ngIf="submitted && myForm.controls.Steps.hasError('required')">
+                Steps is required
+            </md-error>
+        </div>
+
+        <div class="formrow">
+            <label>Duration (Mins)</label>            
+            <md-slider
+                [max]="120"
+                [min]="1"
+                [step]="1"
+                [thumb-label]="true"
+                formControlName="Duration">
+            </md-slider>
+        </div>
+
+        <div class="formrow">
+            <label>Serves</label>            
+            <md-slider
+                [max]="100"
+                [min]="1"
+                [step]="1"
+                [thumb-label]="true"
+                formControlName="Serves">
+            </md-slider>
+        </div>
+
+        <div class="formrow">
+            <md-input-container>
+                <input mdInput placeholder="Notes" formControlName="Notes">
+            </md-input-container>
+        </div>
+
+        <div class="formrow">
+            <button md-button type="submit" color="primary">
+                Save
+            </button>
+            <button md-button [routerLink]="['/recipes']" color="primary">
+                Cancel
+            </button>
+        </div>
+    </form>
+</md-card>

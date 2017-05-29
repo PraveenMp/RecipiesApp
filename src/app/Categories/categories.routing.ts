@@ -8,9 +8,8 @@ const categoryRoutes: Routes = [
     //{ path: '', component: CategoriesComponent }
     //{ path: 'categories', component: CategoriesComponent },
     //{ path: 'categories/add', component: AddCategoriesComponent }
-      /*Lazy loading implemented for ctaegories module*/
     {
-      path: '',
+      path: 'categories',
       component: CategoriesComponent,
       children: [
           {

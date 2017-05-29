@@ -8,7 +8,8 @@ import { HomeModule } from './home/home.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
-//import { CategoryModule } from './Categories/categories.module';
+import { CategoryModule } from './Categories/categories.module';
+import { RecipeModule } from './Recipe/recipe.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MaterialModule,
     HomeModule,
-    //CategoryModule,
+    CategoryModule,
+    RecipeModule,
     AppRoutingModule
   ],
   providers: [],

@@ -27,7 +27,6 @@ export class AddCategoriesComponent implements OnInit{
         if(id){
             this.editForm=true;
             this.categoryService.getCategory(id).subscribe(res=>{
-                console.log(res);
                 if(res.Id>0){
                     this.myForm.get('Title').setValue(res.Title);
                     this.myForm.get('Id').setValue(res.Id);
