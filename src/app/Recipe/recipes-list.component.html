@@ -1,7 +1,7 @@
 <md-list>
   <h3 md-subheader>Recipes</h3>
   <md-list-item *ngFor="let recipe of recipes">
-    {{recipe.Title}}
+    <span (click)=goToRecipe(recipe)>{{recipe.Title}}</span>
     <span class="spacer"></span>
     <button md-icon-button (click)=editRecipe(recipe)>
       <md-icon>edit</md-icon>

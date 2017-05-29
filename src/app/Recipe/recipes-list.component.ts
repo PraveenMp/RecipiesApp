@@ -19,6 +19,10 @@ export class RecipesListComponent {
     this.recipeService.getAllRecipes().subscribe(res => this.recipes = res);
   }
 
+  goToRecipe(recipe:Recipe){
+    this.router.navigate([""+recipe.Id], { relativeTo: this.route });
+  }
+
   editRecipe(recipe:Recipe){
     this.router.navigate(["edit/"+recipe.Id], { relativeTo: this.route });
   }

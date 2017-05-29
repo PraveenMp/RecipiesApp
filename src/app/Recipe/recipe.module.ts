@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RecipesListComponent }  from './recipes-list.component';
 import { AddRecipeComponent } from './addrecipe.component';
+import { RecipeDetailComponent }  from './recipes-detail.component';
 import { SimpleTinyComponent } from './tinymce.component'
 import { RecipeService } from './recipe.service'
 import { RecipeRoutingModule } from './recipe.routing'; 
@@ -14,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         RecipeRoutingModule,
         ReactiveFormsModule 
     ],
-    declarations: [SimpleTinyComponent,RecipesListComponent,AddRecipeComponent],
+    declarations: [SimpleTinyComponent,RecipesListComponent,AddRecipeComponent,RecipeDetailComponent],
     providers : [RecipeService]
 })
 export class RecipeModule { }

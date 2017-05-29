@@ -1,0 +1,27 @@
+<md-card *ngIf="recipe">
+  <h1>{{recipe.Title}}</h1>
+  <div class="formrow">
+      <h3>Ingredients:</h3>
+      <div [innerHTML]="recipe.Ingredients">
+      </div>
+  </div>
+  <div class="formrow">
+      <h3>Steps:</h3>
+      <div [innerHTML]="recipe.Steps">
+      </div>
+  </div>
+  <div class="formrow">
+      <h3>Duration : {{recipe.Duration}} Min.</h3>
+  </div>
+  <div class="formrow" *ngIf="recipe.Serves>0">
+      <h3>Serves : {{recipe.Serves}}</h3>
+  </div>
+  <div class="formrow" *ngIf="recipe.Notes">
+      <h3>Notes : {{recipe.Notes}}</h3>
+  </div>
+  <div class="formrow">
+      <button md-button [routerLink]="['/recipes']" color="primary">
+          Back
+      </button>
+  </div>
+</md-card>
