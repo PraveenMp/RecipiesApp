@@ -10,8 +10,8 @@ const recipeRoutes: Routes = [
     //{ path: 'categories/add', component: AddCategoriesComponent }
       /*Lazy loading implemented for ctaegories module*/
     { path: 'recipes', component: RecipesListComponent },
-    { path: 'recipes/:id', component: RecipeDetailComponent},
     { path: 'recipes/add', component: AddRecipeComponent },
+    { path: 'recipes/:id', component: RecipeDetailComponent},
     { path: 'recipes/edit/:id', component: AddRecipeComponent}
 ];
 
