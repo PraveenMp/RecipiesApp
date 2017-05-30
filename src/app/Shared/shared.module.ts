@@ -6,23 +6,23 @@ import { MaterialModule, MdButtonModule, MdCardModule, MdMenuModule, MdToolbarMo
 @NgModule({
     imports: [
         CommonModule,
-        MaterialModule,
         //BrowserAnimationsModule,
         MdButtonModule,
         MdMenuModule,
         MdCardModule,
         MdToolbarModule,
-        MdIconModule
+        MdIconModule,
+        MaterialModule
     ],
     exports: [
         CommonModule,
-        MaterialModule,
         //BrowserAnimationsModule,
         MdButtonModule,
         MdMenuModule,
         MdCardModule,
         MdToolbarModule,
-        MdIconModule
+        MdIconModule,
+        MaterialModule
     ]
 })
 export class SharedModule { }
