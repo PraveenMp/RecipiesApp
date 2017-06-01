@@ -13,6 +13,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     imports: [
         SharedModule,
         RecipeRoutingModule,
+        FormsModule,
         ReactiveFormsModule 
     ],
     declarations: [SimpleTinyComponent,RecipesListComponent,AddRecipeComponent,RecipeDetailComponent],

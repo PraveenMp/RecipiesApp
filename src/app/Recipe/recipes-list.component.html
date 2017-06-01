@@ -1,12 +1,28 @@
+<div class="formrow">
+  <div class="filterrow txtSearchbox">
+    <md-icon mdPrefix>search</md-icon>
+    <md-input-container class="md-icon-float">
+      <input [(ngModel)]="searchText" (ngModelChange)="filterRecipies()" mdInput placeholder="Search" autocomplete="off" />
+    </md-input-container>
+  </div>
+  <div class="filterrow ddlCategory">
+    <md-icon mdPrefix>filter_list</md-icon> 
+    <md-select [(ngModel)]="selectedCategory" (ngModelChange)="filterRecipies()" placeholder="Category">
+        <md-option *ngFor="let category of categories" [value]="category.Id">
+            {{category.Title}}
+        </md-option>
+    </md-select>
+  </div>
+</div>
+
 <md-list>
-  <h3 md-subheader>Recipes</h3>
-  <md-list-item *ngFor="let recipe of recipes">
-    <span (click)=goToRecipe(recipe)>{{recipe.Title}}</span>
-    <span class="spacer"></span>
+  <!--<h3 md-subheader>Recipes</h3>-->
+  <md-list-item  *ngFor="let recipe of filteredRecipies">
+    <span style="width:100%;" (click)=goToRecipe(recipe)>{{recipe.Title}}</span>
     <button md-icon-button (click)=editRecipe(recipe)>
       <md-icon>edit</md-icon>
     </button>
-    <button md-icon-button (click)=deleteRecipe(recipe)>
+    <button md-icon-button class="md-secondary" (click)=deleteRecipe(recipe,ev)>
       <md-icon>delete</md-icon>
     </button>
   </md-list-item>

@@ -2,8 +2,30 @@
     width: 100%;
 }
 
+.mat-list{
+    clear: both;
+}
+
+.mat-list-item{
+    background-color: gainsboro!important;
+    margin-top: 10px;
+}
+
+.filterrow{
+    width: 50%;
+    float: left;
+}
+
+.filterrow .mat-input-container,.filterrow .mat-select{
+    width: 75% !important;
+}
+ 
 .formrow{
     margin-top: 20px;
+}
+
+.ddlCategory{
+    margin-top: 5px;
 }
 
 #btnAddRecipe{
