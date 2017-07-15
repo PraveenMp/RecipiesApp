@@ -20,6 +20,9 @@
       <h3>Notes : {{recipe.Notes}}</h3>
   </div>
   <div class="formrow">
+      <button md-button [routerLink]="['/recipes/edit/'+recipe.Id]" color="primary">
+          Edit
+      </button>
       <button md-button [routerLink]="['/recipes']" color="primary">
           Back
       </button>
